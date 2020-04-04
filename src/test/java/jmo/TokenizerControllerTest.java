@@ -18,6 +18,14 @@ public class TokenizerControllerTest {
     private MockMvc mockMvc;
 
     @Test
+    public void shouldReturnBadRequest() throws Exception {
+        mockMvc.perform(post("/tokenize")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(new ObjectMapper().writeValueAsString(new AnalysisRequest())))
+                .andExpect(status().isBadRequest());
+    }
+
+    @Test
     public void shouldGenerateTokens() throws Exception {
         ObjectMapper objectMapper = new ObjectMapper();
         AnalysisRequest analysisRequest = new AnalysisRequest();
