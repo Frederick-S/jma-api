@@ -4,5 +4,5 @@ jdk:
 before_install:
   - chmod +x gradlew
 script:
-  - gradlew.bat test jacocoTestReport
+  - ./gradlew test jacocoTestReport
   - bash <(curl -s https://codecov.io/bash)
