@@ -6,7 +6,7 @@ A web app of Japanese morphological analyzer, powered by [Kuromoji](https://gith
 ### Request
 ```http
 POST /tokenize HTTP/1.1
-Host: 
+Host: example.com
 Content-Type: application/json
 
 {
