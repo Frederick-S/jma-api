@@ -1,4 +1,6 @@
 image: Visual Studio 2019
 build: off
+before_test:
+  - gradlew.bat build
 test_script:
   - gradlew.bat test jacocoTestReport
